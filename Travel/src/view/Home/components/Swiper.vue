@@ -35,9 +35,10 @@
 <style scoped>
 .mt-swipe{
     width:100%;
-    height:1.65rem;
+    height:2.5rem;
 }
 img{
     width:100%;
+    height:100%;
 }
 </style>

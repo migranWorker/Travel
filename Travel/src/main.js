@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import MintUI from 'mint-ui'
+import axios from 'axios'
 import 'mint-ui/lib/style.css'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
@@ -12,6 +13,7 @@ import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+Vue.prototype.$http=axios
 Vue.use(MintUI)
 /* eslint-disable no-new */
 new Vue({

@@ -10,7 +10,7 @@
 
 
 <script>
-    import axios from 'axios'
+
     import HomeHeader from './components/Header'
     import HomeSwiper from './components/Swiper'
     import HomeIcons from './components/Icons'
@@ -35,9 +35,8 @@
             }
         },
         mounted(){
-            axios.get('/api/index.json')
+            this.$http.get('/api/index.json')
             .then(({data})=>{
-                console.log(data)
                 if(data.ret){
                     const msg=data.data;
                     this.city=msg.city;

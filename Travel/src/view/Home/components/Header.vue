@@ -6,9 +6,11 @@
         <div class="header-input">
            <span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题
         </div>
-        <div class="header-right">{{city}}
-            <span class="iconfont icon-choose">&#xe6aa;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right">{{city}}
+                <span class="iconfont icon-choose">&#xe6aa;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -39,6 +41,7 @@
         float: right;
         width:1rem;
         text-align: center;
+        color:white;
     }
     .header-input{
         flex:1;

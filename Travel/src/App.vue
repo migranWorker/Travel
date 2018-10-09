@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style>
-
+.mint-swipe-items-wrap{
+  overflow: visible;
+}
 
 </style>

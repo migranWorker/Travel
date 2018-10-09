@@ -99,6 +99,9 @@
     padding-bottom:50%;
     overflow: hidden;
 }
+.icons>div{
+    overflow: visible;
+}
 .icon{
     width:25%;
     height:0;
@@ -129,8 +132,10 @@
     left:0;
     text-align: center;
 }
-.mt-swipe{
-    height: 3.74rem ;
+.mt-swipe-item1{
+    width:100%;
+    height:0;
+    padding-bottom:50%;
+    overflow:visible;
 }
-
 </style>

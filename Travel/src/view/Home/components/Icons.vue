@@ -27,59 +27,13 @@
         name:'Icons',
         data(){
             return{
-                iconList:[
-                    {
-                        id:'001',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png',
-                        title:'景点门票'
-                    },
-                    {
-                        id:'002',
-                        src:'http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png',
-                        title:'滑雪季'
-                    },
-                    {
-                        id:'003',
-                        src:'http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png',
-                        title:'泡温泉'
-                    },
-                    {
-                        id:'004',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png',
-                        title:'动植园'
-                    },
-                    {
-                        id:'005',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png',
-                        title:'必游榜单'
-                    },
-                    {
-                        id:'006',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png',
-                        title:'演出'
-                    },
-                    {
-                        id:'007',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png',
-                        title:'游乐园'
-                    },
-                    {
-                        id:'008',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png',
-                        title:'城市观光'
-                    },
-                      {
-                        id:'009',
-                        src:'http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png',
-                        title:'一日游'
-                    }
-                ]
+           
             }
         },
         computed:{
             pages(){
                 const pages =[];
-                this.iconList.forEach((v,i)=>{
+                this.iconsList.forEach((v,i)=>{
                     const page=Math.floor(i/8);
                     if(!pages[page]){
                         pages[page]=[];
@@ -88,6 +42,9 @@
                 })
                 return pages;
             }
+        },
+        props:{
+            iconsList:Array
         }
     }
 </script>

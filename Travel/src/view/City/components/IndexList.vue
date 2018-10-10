@@ -2,7 +2,7 @@
     <div class="indexlist">
         <mt-index-list>
             <city-list :hotCities="hotCities"></city-list>
-            <mt-index-section 
+            <mt-index-section  
             v-for="(item,k) in cities"
             :key="k"
             :index="k">
@@ -10,8 +10,9 @@
                     v-for="i in item"
                     :key="i.id"
                     :title="i.name"
+                    @click.native="change(i.name)"
                     >
-                    </mt-cell>
+                </mt-cell>
             </mt-index-section>
         </mt-index-list>
     </div>
@@ -28,7 +29,13 @@
         },
         components:{
             CityList
-        }
+        },
+        methods:{
+            change(x){
+                this.$router.push('/');
+                this.$store.commit('changeCity',x);
+            }
+        },
 
     }
 

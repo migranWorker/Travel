@@ -3,7 +3,7 @@
         <div class="container">
             <div class="title border-topbottom">当前城市</div>
             <div class="btn-list">
-                <button class="btn">北京</button>
+                <button class="btn">{{city}}</button>
             </div>
         </div>
          <div class="container">
@@ -13,6 +13,7 @@
                     class="btn"
                     v-for="item in hotCities"
                     :key="item.id"
+                    @click="change(item.name)"
                 >{{item.name}}</button>
             </div>
         </div>
@@ -25,9 +26,20 @@
         props:{
             hotCities:Array
         },
-        mounted(){
-            console.log(this.hotCities);
-            console.log(this.cities);
+        data(){
+            return{
+            }
+        },
+        methods:{
+            change(x){
+                this.$router.push('/');
+                this.$store.commit('changeCity',x)
+            }
+        },
+        computed:{
+             city(){
+                return this.$store.state.city
+            }
         }
     }
 </script>

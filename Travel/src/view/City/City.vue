@@ -2,8 +2,8 @@
     <div class="city">
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :hotCities="hotCities" :cities='cities'></city-list>
-        <city-left :cities='cities'></city-left>
+        <city-index-list :cities='cities' :hotCities="hotCities"></city-index-list>
+
     </div>
 </template>
 
@@ -11,15 +11,13 @@
 <script>
     import CityHeader from './components/Header'
     import CitySearch from './components/Search'
-    import CityList from './components/List'
-    import CityLeft from './components/Left'
+    import CityIndexList from './components/IndexList'
     export default{
         name:'City',
         components:{
             CityHeader,
             CitySearch,
-            CityList,
-            CityLeft
+            CityIndexList
         },
         data(){
             return{
@@ -41,5 +39,27 @@
 </script>
 
 <style>
-
+.mint-indexlist-nav{
+    background-color:rgba(0,0,0,0);
+    position: fixed;
+    border-left:none;
+    top:1.42rem;
+}
+.mint-indexsection-index{
+    height:.54rem;
+    background-color: #eee;
+    padding: 0;
+    padding-left:.2rem;
+    line-height: .54rem;
+    color:#666;
+}
+.mint-cell-wrapper{
+    border-bottom: .02rem solid #ddd;
+}
+.mint-indexlist-content{
+    margin-right: 0 !important;
+}
+.mint-indexlist-navlist{
+    color: #00bcd4;
+}
 </style>

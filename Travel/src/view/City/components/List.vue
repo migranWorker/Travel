@@ -16,14 +16,6 @@
                 >{{item.name}}</button>
             </div>
         </div>
-         <div class="container">
-             <div v-for="(item,k) in cities" :key="k">
-                <div class="title border-topbottom">{{k}}</div>
-                <div class="item-list" v-for="i in item" :key='i.id'>
-                    <div class="item border-bottom">{{i.name}}</div>
-                </div>
-             </div>
-        </div>
     </div>
 </template>
 
@@ -31,8 +23,7 @@
     export default{
         name:'List',
         props:{
-            hotCities:Array,
-            cities:Object
+            hotCities:Array
         },
         mounted(){
             console.log(this.hotCities);
@@ -44,7 +35,6 @@
 <style scoped>
     .list{
         overflow: hidden;
-        position: absolute;
         right: 0;
         left:0;
     }
@@ -69,17 +59,5 @@
         font-size: 0.2rem;
         color: #555;
         margin:.1rem;
-    }
-    .item-list{
-        line-height: .66rem;
-    }
-    .item{
-         padding-left:.2rem;
-    }
-    .item::before{
-        background-color:#ddd;
-    }
-    .container{
-        overflow: hidden;
     }
 </style>

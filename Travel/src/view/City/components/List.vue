@@ -9,27 +9,35 @@
          <div class="container">
             <div class="title border-topbottom">热门城市</div>
             <div class="btn-list">
-                <button class="btn">北京</button>
-                <button class="btn">北京</button>
-                <button class="btn">北京</button>
-                <button class="btn">北京</button>
+                <button 
+                    class="btn"
+                    v-for="item in hotCities"
+                    :key="item.id"
+                >{{item.name}}</button>
             </div>
         </div>
          <div class="container">
-            <div class="title border-topbottom">A</div>
-            <div class="item-list">
-                <div class="item border-bottom">阿坝</div>
-            </div>
-            <div class="item-list">
-                <div class="item border-bottom">阿坝</div>
-            </div>
+             <div v-for="(item,k) in cities" :key="k">
+                <div class="title border-topbottom">{{k}}</div>
+                <div class="item-list" v-for="i in item" :key='i.id'>
+                    <div class="item border-bottom">{{i.name}}</div>
+                </div>
+             </div>
         </div>
     </div>
 </template>
 
 <script>
     export default{
-        name:'List'
+        name:'List',
+        props:{
+            hotCities:Array,
+            cities:Object
+        },
+        mounted(){
+            console.log(this.hotCities);
+            console.log(this.cities);
+        }
     }
 </script>
 
@@ -60,7 +68,7 @@
         padding:.06rem 0;
         font-size: 0.2rem;
         color: #555;
-        margin-top:.1rem;
+        margin:.1rem;
     }
     .item-list{
         line-height: .66rem;

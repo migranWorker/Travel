@@ -1,22 +1,21 @@
 <template>
     <div class="left">
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
+        <div v-for="(item,k) in cities" :key="k">{{k}}</div>
     </div>
 </template>
 
 <script>
     export default{
-        name:'Left'
+        name:'Left',
+        props:{
+            cities:Object
+        }
     }
 </script>
 
 <style scoped>
  .left{
-     position: absolute;
+     position: fixed;
      right: 0;
      z-index: 1;
      width:.32rem;

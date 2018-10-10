@@ -2,8 +2,8 @@
     <div class="city">
         <city-header></city-header>
         <city-search></city-search>
-        <city-list></city-list>
-        <city-left></city-left>
+        <city-list :hotCities="hotCities" :cities='cities'></city-list>
+        <city-left :cities='cities'></city-left>
     </div>
 </template>
 
@@ -20,6 +20,22 @@
             CitySearch,
             CityList,
             CityLeft
+        },
+        data(){
+            return{
+                hotCities:[],
+                cities:{}
+            }
+        },
+        mounted(){
+            this.$http.get('api/city.json')
+                .then(({data})=>{
+                    if(data.ret){
+                        const msg =data.data;
+                        this.hotCities=msg.hotCities;
+                        this.cities=msg.cities
+                    }
+                })
         }
     }
 </script>

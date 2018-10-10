@@ -37,6 +37,7 @@
         mounted(){
             this.$http.get('/api/index.json')
             .then(({data})=>{
+                console.log(data)
                 if(data.ret){
                     const msg=data.data;
                     this.city=msg.city;

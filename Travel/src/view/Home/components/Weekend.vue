@@ -7,7 +7,7 @@
             <li v-for="item in weekendList" :key="item.id">
                 <div class="content border-bottom" >
                     <div class="content-img">
-                        <img :src="item.src" alt="">
+                        <img :src="item.imgUrl" alt="">
                     </div>
                     <div class="content-desc">
                         <p class="p-title">{{item.title}}</p>

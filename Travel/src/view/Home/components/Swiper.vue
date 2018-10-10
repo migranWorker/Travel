@@ -2,7 +2,7 @@
     <div class="swiper">
         <mt-swipe class="mt-swipe">
             <mt-swipe-item v-for='item in swiperList' :key='item.id'>
-                <img :src="item.url" alt="">
+                <img :src="item.imgUrl" alt="">
             </mt-swipe-item>
         </mt-swipe>
     </div>

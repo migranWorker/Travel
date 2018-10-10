@@ -7,6 +7,8 @@ import store from './store'
 import fastClick from 'fastclick'
 import MintUI from 'mint-ui'
 import axios from 'axios'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 import 'mint-ui/lib/style.css'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
@@ -16,6 +18,7 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.prototype.$http=axios
 Vue.use(MintUI)
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

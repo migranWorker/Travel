@@ -11,10 +11,10 @@
         >
             <div class="icon" v-for='item1 in item' :key="item1.id">
                 <div class="icon-img">
-                    <img :src="item1.src" alt="">
+                    <img :src="item1.imgUrl" alt="">
                 </div>
                 <div class="icon-content">
-                    {{item1.title}}
+                    {{item1.desc}}
                 </div>
             </div>
         </mt-swipe-item>

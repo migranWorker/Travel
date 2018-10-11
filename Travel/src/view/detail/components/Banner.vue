@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class="banner" @click="change">
-            <img src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" alt="">
+            <img :src="bannerImg" alt="">
             <div class="content">
-                <div class="title">大连圣亚海洋世界(AAAA景区)</div>
+                <div class="title">{{sightName}}</div>
                 <div class="num">
                 <span class="iconfont">&#xe7f1;</span>&nbsp;&nbsp;2
                 </div>
             </div>
         </div>
-        <pic :imgList='imgList' v-show="show" @close='closePic'></pic>
+        <pic v-show="show" @close='closePic' :gallaryImgs='gallaryImgs'></pic>
     </div>
 </template>
 
@@ -20,13 +20,14 @@
         components:{
             Pic
         },
+        props:{
+            sightName:String,
+            bannerImg:String,
+            gallaryImgs:Array
+        },
         data(){
             return{
-                show:false,
-                imgList:[
-                    'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg',
-                    'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg'
-                ]
+                show:false
             }
         },
         methods:{

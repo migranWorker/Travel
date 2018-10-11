@@ -2,7 +2,7 @@
     <div class="pic" @click="picClose">
         <div class="container">
             <swiper ref="mySwiper" :options="swiperOption">
-                <swiper-slide v-for="(item,i) in imgList" :key="i">
+                <swiper-slide v-for="(item,i) in gallaryImgs" :key="i">
                     <img :src="item" alt="">
                 </swiper-slide>
                 <div class="swiper-pagination"  slot="pagination"></div>
@@ -25,7 +25,7 @@
             }
         },
         props:{
-            imgList:{
+            gallaryImgs:{
                 type:Array,
                 default(){
                     return[

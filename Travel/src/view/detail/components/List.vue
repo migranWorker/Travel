@@ -19,7 +19,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .title{
     width:100%;
     line-height:.8rem; 

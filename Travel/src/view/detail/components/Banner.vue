@@ -9,16 +9,20 @@
                 </div>
             </div>
         </div>
-        <pic v-show="show" @close='closePic' :gallaryImgs='gallaryImgs'></pic>
+        <fade-animation>
+            <pic v-show="show" @close='closePic' :gallaryImgs='gallaryImgs'></pic>
+        </fade-animation>
     </div>
 </template>
 
 <script>
     import Pic from '@/components/Pic/Pic'
+    import FadeAnimation from '@/components/Fade/FadeAnimation'
     export default{
         name:'Banner',
         components:{
-            Pic
+            Pic,
+            FadeAnimation
         },
         props:{
             sightName:String,

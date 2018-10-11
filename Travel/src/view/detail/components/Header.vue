@@ -1,5 +1,4 @@
 <template>
-<div class="one">
     <div class="header">
         <router-link to="/" tag="div" class="back-abs" v-show="show">
             <div class="iconfont icon-back">&#xe624;</div>
@@ -14,7 +13,6 @@
             景点详情
         </div>
         </div>
-    </div>
     </div>
 </template>
 
@@ -32,7 +30,6 @@
         },
         methods:{
             change(){
-                console.log(1);
                 let top = document.documentElement.scrollTop;
                 if(top>60){
                     let opacity=top/160;
@@ -95,8 +92,4 @@
         text-align: center;
         font-size: .34rem;
     }
-   .one{
-       height: 40rem;
-       width:100%;
-   }
 </style>
